@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CuacaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="?android:colorBackground">
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            >
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search..."
+                android:padding="12dp"
+                android:background="?android:selectableItemBackground"
+                android:inputType="text"
+                android:textColorHint="?android:textColorHint"
+                android:textColor="?android:textColorPrimary" />
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="?android:selectableItemBackground"
+                android:textColor="?android:textColorPrimary" />
+        </LinearLayout>
+
+        <!-- Main Action Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonView_cityInfo"
+            android:text="View City Info"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="?android:selectableItemBackground"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clipToPadding="false" />
+
+        <!-- Footer Summary -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?android:colorBackground"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/totalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Record :"
+                android:textSize="20sp"
+                android:textColor="?android:textColorPrimary" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

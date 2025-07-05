@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    android:backgroundTint="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Currency Code -->
+        <TextView
+            android:id="@+id/kodeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Currency Description -->
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:letterSpacing="0.01"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kodeTextView"
+            app:layout_constraintEnd_toStartOf="@+id/dividerView" />
+
+        <!-- Exchange Rate -->
+        <TextView
+            android:id="@+id/kursTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1976D2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Currency ID -->
+        <TextView
+            android:id="@+id/kursIDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:letterSpacing="0.01"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kursTextView" />
+
+        <!-- Subtle Divider Line -->
+        <View
+            android:id="@+id/dividerView"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#E0E0E0"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@+id/descriptionTextView"
+            app:layout_constraintEnd_toStartOf="@+id/kursTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
