@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjectFull</string>
+    <string name="app_name">Login</string>
     <string-array name="jenisKelaminArray">
         <item>Laki-laki</item>
         <item>Perempuan</item>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:background="#FFFFFF"
     tools:context=".MenuActivity">
 
     <!-- Header -->
@@ -14,13 +14,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="24dp"
         android:text="Dashboard"
-        android:textColor="#1A1A1A"
-        android:textSize="32sp"
+        android:textColor="#09090B"
+        android:textSize="36sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-medium"
+        android:letterSpacing="-0.02"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,11 +31,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:text="Pilih layanan yang Anda butuhkan"
-        android:textColor="#6B7280"
+        android:textColor="#71717A"
         android:textSize="16sp"
+        android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_title" />
@@ -42,9 +44,9 @@
     <GridLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="32dp"
         android:columnCount="1"
         android:rowCount="3"
@@ -58,33 +60,35 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E4E4E7">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:padding="24dp">
+                android:padding="20dp">
 
                 <!-- Icon Container -->
                 <LinearLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="@drawable/circle_background_blue"
                     android:gravity="center"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginEnd="16dp">
 
                     <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:src="@drawable/school_24px"
-                        android:tint="#2563EB"
+                        android:tint="#0F172A"
                         tools:ignore="UseAppTint" />
                 </LinearLayout>
 
@@ -99,19 +103,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Mahasiswa"
-                        android:textColor="#1A1A1A"
-                        android:textSize="20sp"
+                        android:textColor="#09090B"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium" />
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="-0.01" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Kelola data mahasiswa dengan mudah"
-                        android:textColor="#6B7280"
+                        android:textColor="#71717A"
                         android:textSize="14sp"
-                        android:lineSpacingExtra="2dp" />
+                        android:lineSpacingExtra="2dp"
+                        android:fontFamily="sans-serif" />
 
                     <TextView
                         android:id="@+id/go_mahasiswa"
@@ -122,14 +128,15 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:paddingStart="16dp"
-                        android:paddingTop="8dp"
-                        android:paddingEnd="16dp"
-                        android:paddingBottom="8dp"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
                         android:text="Buka →"
-                        android:textColor="#2563EB"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textColor="#09090B"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -139,33 +146,35 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E4E4E7">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:padding="24dp">
+                android:padding="20dp">
 
                 <!-- Icon Container -->
                 <LinearLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="@drawable/circle_background_green"
                     android:gravity="center"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginEnd="16dp">
 
                     <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:src="@drawable/payments_24px"
-                        android:tint="#059669"
+                        android:tint="#0F172A"
                         tools:ignore="UseAppTint" />
                 </LinearLayout>
 
@@ -180,19 +189,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Forex"
-                        android:textColor="#1A1A1A"
-                        android:textSize="20sp"
+                        android:textColor="#09090B"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium" />
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="-0.01" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Pantau nilai tukar mata uang real-time"
-                        android:textColor="#6B7280"
+                        android:textColor="#71717A"
                         android:textSize="14sp"
-                        android:lineSpacingExtra="2dp" />
+                        android:lineSpacingExtra="2dp"
+                        android:fontFamily="sans-serif" />
 
                     <TextView
                         android:id="@+id/go_forex"
@@ -203,14 +214,15 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:paddingStart="16dp"
-                        android:paddingTop="8dp"
-                        android:paddingEnd="16dp"
-                        android:paddingBottom="8dp"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
                         android:text="Buka →"
-                        android:textColor="#059669"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textColor="#09090B"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -220,33 +232,35 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E4E4E7">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:padding="24dp">
+                android:padding="20dp">
 
                 <!-- Icon Container -->
                 <LinearLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="@drawable/circle_background_orange"
                     android:gravity="center"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginEnd="16dp">
 
                     <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:src="@drawable/cloud_24px"
-                        android:tint="#EA580C"
+                        android:tint="#0F172A"
                         tools:ignore="UseAppTint" />
                 </LinearLayout>
 
@@ -261,19 +275,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cuaca"
-                        android:textColor="#1A1A1A"
-                        android:textSize="20sp"
+                        android:textColor="#09090B"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium" />
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="-0.01" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Informasi cuaca terkini dan prediksi"
-                        android:textColor="#6B7280"
+                        android:textColor="#71717A"
                         android:textSize="14sp"
-                        android:lineSpacingExtra="2dp" />
+                        android:lineSpacingExtra="2dp"
+                        android:fontFamily="sans-serif" />
 
                     <TextView
                         android:id="@+id/go_cuaca"
@@ -284,14 +300,15 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:paddingStart="16dp"
-                        android:paddingTop="8dp"
-                        android:paddingEnd="16dp"
-                        android:paddingBottom="8dp"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
                         android:text="Buka →"
-                        android:textColor="#EA580C"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textColor="#09090B"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

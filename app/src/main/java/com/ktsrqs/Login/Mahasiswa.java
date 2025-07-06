@@ -82,7 +82,7 @@ public class Mahasiswa extends AppCompatActivity {
 
         for (MahasiswaModel item : mahasiswaModelList) {
             if (item.getNama().toLowerCase().contains(text.toLowerCase())) {
-                Toast.makeText(Mahasiswa.this, "test", Toast.LENGTH_SHORT).show(); // Ini hanya untuk debugging
+//                Toast.makeText(Mahasiswa.this, "test", Toast.LENGTH_SHORT).show(); // Ini hanya untuk debugging
                 filteredList.add(item);
             }
         }

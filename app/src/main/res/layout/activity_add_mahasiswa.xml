@@ -5,125 +5,328 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".AddMahasiswa">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="24dp">
+
+        <!-- Header -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:text="Mahasiswa Baru"
-            android:textSize="25sp"
-            android:textStyle="bold"/>
+            android:textColor="#09090B"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.02" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NIM"/>
+            android:layout_marginBottom="32dp"
+            android:text="Lengkapi informasi mahasiswa baru"
+            android:textColor="#71717A"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
 
-        <EditText
+        <!-- Form Fields -->
+
+        <!-- NIM Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/nimEditText"
-            android:inputType="number"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nama"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="NIM"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <EditText
+            <EditText
+                android:id="@+id/nimEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_background"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#09090B"
+                android:textColorHint="#71717A"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:hint="Masukkan NIM" />
+        </LinearLayout>
+
+        <!-- Nama Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/namaEditText"
-            android:inputType="textCapWords"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jenis Kelamin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Nama"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <Spinner
+            <EditText
+                android:id="@+id/namaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_background"
+                android:inputType="textCapWords"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#09090B"
+                android:textColorHint="#71717A"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:hint="Masukkan nama lengkap" />
+        </LinearLayout>
+
+        <!-- Jenis Kelamin Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/jenisKelaminSpinner"
-            android:entries="@array/jenisKelaminArray"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tempat Lahir"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Jenis Kelamin"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <EditText
+            <Spinner
+                android:id="@+id/jenisKelaminSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/jenisKelaminArray"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </LinearLayout>
+
+        <!-- Tempat Lahir Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tempatLahirEditText"
-            android:inputType="textCapWords"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tanggal Lahir (yyyy-mm-dd)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Tempat Lahir"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <EditText
+            <EditText
+                android:id="@+id/tempatLahirEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_background"
+                android:inputType="textCapWords"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#09090B"
+                android:textColorHint="#71717A"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:hint="Masukkan tempat lahir" />
+        </LinearLayout>
+
+        <!-- Tanggal Lahir Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tanggalLahirEditText"
-            android:inputType="date"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Alamat"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Tanggal Lahir"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <EditText
+            <EditText
+                android:id="@+id/tanggalLahirEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_background"
+                android:inputType="date"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#09090B"
+                android:textColorHint="#71717A"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:hint="yyyy-mm-dd" />
+        </LinearLayout>
+
+        <!-- Alamat Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/alamatEditText"
-            android:inputType="textCapSentences"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jurusan/Prodi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Alamat"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <Spinner
+            <EditText
+                android:id="@+id/alamatEditText"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/input_background"
+                android:inputType="textCapSentences|textMultiLine"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:textColor="#09090B"
+                android:textColorHint="#71717A"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:hint="Masukkan alamat lengkap"
+                android:gravity="top" />
+        </LinearLayout>
+
+        <!-- Jurusan/Prodi Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/jpSpinner"
-            android:entries="@array/jpArray"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Status Pernikahan"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Jurusan/Prodi"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <Spinner
+            <Spinner
+                android:id="@+id/jpSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/jpArray"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </LinearLayout>
+
+        <!-- Status Pernikahan Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/statusNikahSpinner"
-            android:entries="@array/statusNikahArray"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tahun Masuk"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Status Pernikahan"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
 
-        <EditText
+            <Spinner
+                android:id="@+id/statusNikahSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/statusNikahArray"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </LinearLayout>
+
+        <!-- Tahun Masuk Field -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tahunMasukEditText"
-            android:inputType="number"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Tahun Masuk"
+                android:textColor="#09090B"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/tahunMasukEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_background"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#09090B"
+                android:textColorHint="#71717A"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:hint="Masukkan tahun masuk" />
+        </LinearLayout>
+
+        <!-- Save Button -->
         <Button
+            android:id="@+id/saveButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
+            android:background="@drawable/primary_button_background"
             android:text="Simpan"
-            android:id="@+id/saveButton"/>
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="16dp" />
+
     </LinearLayout>
 
 </ScrollView>
